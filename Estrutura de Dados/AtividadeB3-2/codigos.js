@@ -2,22 +2,22 @@
 function buscaLinear(A, x) {
     for (let i = 0; i < A.length; i++) {
         if (A[i] === x) {
-            return i;  // Retorna o índice onde x foi encontrado
+            return i;  
         }
     }
-    return -1;  // Se não encontrar, retorna -1
+    return -1;  
 }
 
 // ----------- Busca Linear em Ordem -----------
 function buscaLinearEmOrdem(A, x) {
     for (let i = 0; i < A.length; i++) {
         if (A[i] === x) {
-            return i;  // Retorna o índice onde x foi encontrado
+            return i;  
         } else if (A[i] > x) {
-            break;  // Como o array está ordenado, pode parar
+            break;  
         }
     }
-    return -1;  // Se não encontrar, retorna -1
+    return -1;  
 }
 
 // ----------- Busca Binária -----------
@@ -28,13 +28,13 @@ function buscaBinaria(A, x) {
     while (esq <= dir) {
         let meio = Math.floor((esq + dir) / 2);
         if (A[meio] === x) {
-            return meio;  // Retorna o índice onde x foi encontrado
+            return meio; 
         } else if (A[meio] < x) {
-            esq = meio + 1;  // Procura na metade direita
+            esq = meio + 1;  
         } else {
-            dir = meio - 1;  // Procura na metade esquerda
+            dir = meio - 1;  
         }
     }
     
-    return -1;  // Se não encontrar, retorna -1
+    return -1;  
 }
