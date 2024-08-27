@@ -32,8 +32,7 @@ function buscaLinear(A, x) {
 
 function buscaBinaria(A, x) {
     let esq = 0;
-    let dir = A.length - 1;
-    
+    let dir = A.length - 1; 
     while (esq <= dir) {
         let meio = Math.floor((esq + dir) / 2);
         if (A[meio] === x) {
@@ -43,7 +42,6 @@ function buscaBinaria(A, x) {
         } else {
             dir = meio - 1;  
         }
-    }
-    
+    }  
     return -1;  
 }
